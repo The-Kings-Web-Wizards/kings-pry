@@ -4,7 +4,7 @@ import  About from './Pages/About'
 import  Enroll from './Pages/Enroll'
 import  Events from './Pages/Events'
 import Navbar from './components/Navbar';
-
+import Footer from './components/Footer'
 function App() {
   
 
@@ -18,11 +18,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/enroll" element={<Enroll />} />
         <Route path="/him" element={<Events />} />
-        <Route path="/new-collection" element={<About />} />
+        <Route path="/about" element={<About />} />
      
        
       </Routes>
-    
+    <Footer/>
       
     </>
   )
