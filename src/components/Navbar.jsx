@@ -46,7 +46,7 @@ function Navbar() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 md:left-[5%] w-full md:w-[90%] z-50 transition-all duration-300 backdrop-blur-lg ${
+    <nav className={`fixed top-0 left-0  w-full md:w-[100%] z-50 transition-all duration-300  ${
       scrolled ? 'bg-white text-[#004D24] h-16' : 'h-24 text-white'
     }`}>
       <div className="container mx-auto flex justify-between items-center h-full px-7">
