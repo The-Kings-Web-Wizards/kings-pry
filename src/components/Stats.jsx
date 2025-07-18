@@ -24,7 +24,7 @@ const Stats = () => {
         } else {
           clearInterval(interval);
         }
-      }, 30);
+      }, 80);
     });
   }, [stats]);
 
