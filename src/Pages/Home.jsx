@@ -6,11 +6,17 @@ import Cards from '../components/Cards';
 import  {programsData} from '../components/Data'
 import Stats from '../components/Stats';
 import MultipleItems from '../components/MultipleItems';
+import Modal from '../components/Modal';
+import { useState } from 'react';
+import ModalSlider from '../components/ModalSlider';
+import { image } from 'framer-motion/client';
 
 
 
 function Home() {
 
+
+  const [open,setOpen] = useState(false)
 
 
 
@@ -20,10 +26,10 @@ return (
 {/* Hero Banner */}
 <Banner
 title="Welcome to Kings Primary School"
-subtitle="Nurturing Excellence, Building Character"
+subtitle="Nurturing excellence and character helps individuals reach their potential with integrity, resilience, and compassion, fostering success rooted in strong ethics."
 ctaText="Enroll"
 ctaLink="/enroll"
-className='w-full h-[100vh]  banner  text-white font-light '
+className='w-[100%] h-[100vh]  banner  text-white font-light '
 />
 {/* Quick Links Bar */}
 <section className="bg-[#004D24] text-white py-3">
@@ -67,10 +73,27 @@ md:justify-start">
 rounded-lg hover:bg-[#00361a] transition">
 Learn More About Us
 </Link>
-<Link to='/gallery' className="btn border-2 border-[#004d24]
-text-[#004d24] py-3 px-6 rounded-lg hover:bg-gray-100 transition">
+<button  className="btn border-2 border-[#004d24] 
+text-[#004d24] py-3 px-6 rounded-lg hover:bg-gray-100 transition
+"
+onClick={()=>setOpen(true)}
+
+>
 Take a Virtual Tour
-</Link>
+</button>
+
+<Modal open={open} onclose={()=>setOpen(false)} >
+  
+ <ModalSlider >
+    <h2>Take a lovely tour of our school</h2>
+
+    <div>
+      <img src={image} />
+    </div>
+ </ModalSlider>
+
+</Modal>
+
 </div>
 </div>
 </div>
@@ -82,8 +105,9 @@ Take a Virtual Tour
 
 {/* stas secton */}
 
-<section  className='flex items-center justify-center space-x-7'>
+<section  className='flex flex-col items-center justify-center space-x-7 py-[1.5em]'>
 
+  
 
 <Stats/>
 
@@ -116,7 +140,7 @@ Take a Virtual Tour
       {/* Image Card */}
       <div className="lg:w-2/5 relative group rounded-3xl overflow-hidden shadow-2xl">
         <img 
-          src="/public/img1.png" 
+          src="https://res.cloudinary.com/dxrv8lauy/image/upload/v1751885574/ChatGPT_Image_Jul_7_2025_09_52_14_AM_eawm1x.png" 
           alt="Students learning" 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
@@ -163,12 +187,6 @@ Take a Virtual Tour
   </div>
 </section>
 
-{/* Testimonials */}
-{/* <Testimonials testimonials={testimonials} /> */}
-        <MultipleItems/>
-{/* News & Events */}
-{/* <NewsSection newsItems={newsItems} /> */}
-{/* Call to Action */}
 
 <section className="py-16 bg-amber-400 mb-5 text-white border-2 ">
 <div className="container mx-auto px-4 text-center">
@@ -189,6 +207,11 @@ Contact Us
 </Link>
 </div>
 </div>
+</section>
+
+{/* map section */}
+<section className='w-full'>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.621761783712!2d25.81329347406892!3d-17.949787179710412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x194fe5200ee7279b%3A0x7c386482f4da0968!2sKings%20Primary%20School!5e0!3m2!1sen!2szw!4v1751893972138!5m2!1sen!2szw" width="100%" height="450"   referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 
 </main>

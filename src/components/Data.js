@@ -1,3 +1,5 @@
+
+
  
  export const ValuesCars = [
 
@@ -119,33 +121,33 @@ export const NewsCard = [
 
 export const testimonials = [
 {
-    url: "http snsnck/ncni[vnnsk;",
+    image: "https://images.pexels.com/photos/31485825/pexels-photo-31485825.jpeg",
 quote: "Kings Primary has provided my child with an exceptionalfoundation for learning.",
 author: "Mrs. Johnson, Parent",
 role: "Grade 3 Parent"
 },
 {
-     url: "http snsnck/ncni[vnnsk;",
+     image: "https://res.cloudinary.com/dxrv8lauy/image/upload/v1750773816/samples/man-portrait.jpg",
 quote: "The teachers go above and beyond to make learning engagingand meaningful.",author: "Mr. Thompson",
 role: "Grade 5 Parent"
 },
 
 {
-     url: "http snsnck/ncni[vnnsk;",
+     image: "https://images.pexels.com/photos/1432238/pexels-photo-1432238.jpeg",
 quote: "I love coming to school every day! The activities are so much fun.",
 author: "Sarah K.",
 role: "Grade 2 Student"
 },
 {
-     url: "http snsnck/ncni[vnnsk;",
+     image: "https://images.pexels.com/photos/9424119/pexels-photo-9424119.jpeg",
 quote: "I love coming to school every day! The activities are so much fun.",
-author: "Sarah K.",
+author: "Thunder",
 role: "Grade 2 Student"
 },
 {
-     url: "http snsnck/ncni[vnnsk;",
+     image: "https://images.pexels.com/photos/28049903/pexels-photo-28049903.jpeg",
 quote: "I love coming to school every day! The activities are so much fun.",
-author: "Sarah K.",
+author: "Tana M.",
 role: "Grade 2 Student"
 }
 ];
@@ -202,3 +204,64 @@ description: 'Start your child\'s educational journey with us today',
 btnText: 'Enroll Now'
 },
 ];
+
+
+
+// events data
+
+
+export const UpcomingEvents = [
+
+
+{
+
+    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "title": "Annual Sports Day",
+    "description": "Join us for a day of fun, competition, and sportsmanship.",
+    "date": " March 15, 2024"
+},
+
+
+{
+
+    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "title": "Science Fair",
+    "description": "Explore innovative projects by our talented students.",
+    "date": " April 20, 2024"
+},
+
+{
+
+    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "title": "Parent-Teacher Conference",
+    "description": "Discuss your child's progress with our dedicated teachers.",
+    "date": " May 10, 2024"
+},
+
+{
+
+    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "title": "Art Exhibition",
+    "description": "Showcasing the creative talents of our students.",
+    "date": " June 5, 2024"
+},
+
+{
+
+    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "title": "Cultural Day",
+    "description": "Celebrating diversity through performances and exhibitions.",
+    "date": " July 12, 2024"
+},
+
+{
+
+    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "title": "Graduation Ceremony",
+    "description": "Honoring our graduating class and their achievements.",
+    "date": "  August 25, 2024"
+},
+
+
+
+]
