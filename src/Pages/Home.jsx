@@ -2,16 +2,12 @@
 
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
-import { digitalTourData } from '../components/Data';
 import  {programsData} from '../components/Data'
 import Stats from '../components/Stats';
 import MultipleItems from '../components/MultipleItems';
 import Modal from '../components/Modal';
 import { useState } from 'react';
 import ModalSlider from '../components/ModalSlider';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -20,33 +16,7 @@ function Home() {
 
   const [open,setOpen] = useState(false)
 
-  const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3, 
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1
-      }
-    }
-  ]
-};
-
+  
 
 return (
 <main className="font-sans">
@@ -110,37 +80,9 @@ Take a Virtual Tour
 </button>
 
 <Modal open={open} onClose={() => setOpen(false)} className='pt-20'>
-  {open && (
-    <div>
-      <button
-        className="absolute top-4 right-4 z-50 bg-white rounded-full p-2 shadow hover:bg-gray-200 transition"
-        onClick={() => setOpen(false)}
-        aria-label="Close Modal"
-      >
-        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
-          <line x1="6" y1="6" x2="18" y2="18" />
-          <line x1="6" y1="18" x2="18" y2="6" />
-        </svg>
-      </button>
-      <Slider {...settings}>
-        {digitalTourData.map((modalData) => (
-          <div key={modalData.id} className="px-auto w-[80%] h-[80%] ">
-            <div className="flex flex-col items-center bg-gray-100 h-[70%] p-4">
-              <img src={modalData.image} alt={modalData.title} className="w-full h-auto rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{modalData.title}</h3>
-              <p className="text-gray-600 mb-4">{modalData.description}</p>
-              <Link
-                to={modalData.link}
-                className="btn bg-[#004d24] text-white py-2 px-4 rounded-lg hover:bg-[#00361a] transition"
-              >
-                {modalData.btnText}
-              </Link>
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
-  )}
+
+<ModalSlider/>
+
 </Modal>
 
 </div>
@@ -152,24 +94,42 @@ Take a Virtual Tour
 
 
 
-{/* stas secton */}
-
-<section  className='flex flex-col items-center justify-center space-x-7 py-[1.5em]'>
-
-  
-
-<Stats/>
-
-
+{/* Stats Section */}
+<section className='flex flex-col items-center justify-center py-[2em] bg-white'>
+  <div className="container mx-auto px-4">
+    <h2 className="text-3xl md:text-4xl font-bold text-amber-400 mb-4 text-center">
+      School Achievements & Impact
+    </h2>
+    <p className="text-lg text-gray-700 mb-8 text-center max-w-2xl mx-auto">
+      At Kings Primary, our commitment to excellence is reflected in our impressive milestones. Explore our key statistics and see how we’re making a difference in education and the community.
+    </p>
+    <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+      <div className="bg-amber-50 rounded-xl shadow-md p-6 flex-1 text-center">
+        <h3 className="text-2xl font-bold text-[#004d24] mb-2">98%</h3>
+        <p className="text-gray-600">Pass Rate in National Exams</p>
+      </div>
+      <div className="bg-amber-50 rounded-xl shadow-md p-6 flex-1 text-center">
+        <h3 className="text-2xl font-bold text-[#004d24] mb-2">500+</h3>
+        <p className="text-gray-600">Active Students</p>
+      </div>
+      <div className="bg-amber-50 rounded-xl shadow-md p-6 flex-1 text-center">
+        <h3 className="text-2xl font-bold text-[#004d24] mb-2">30+</h3>
+        <p className="text-gray-600">Qualified Teachers</p>
+      </div>
+      <div className="bg-amber-50 rounded-xl shadow-md p-6 flex-1 text-center">
+        <h3 className="text-2xl font-bold text-[#004d24] mb-2">15</h3>
+        <p className="text-gray-600">Extracurricular Clubs</p>
+      </div>
+    </div>
+   
+    <div className="mt-8 text-center">
+      <Link to="/about" className="inline-block px-8 py-3 bg-[#004d24] text-white rounded-lg font-semibold hover:bg-[#00361a] transition">
+        Learn More About Our Achievements
+      </Link>
+    </div>
+  </div>
 </section>
-
-
-
-
-
-
-
-{/* Programs Section */}
+{/* Programs Section */}}
 <section className="py-16  ">
   <div className="container mx-auto px-4">
     <div className="text-center mb-16">
