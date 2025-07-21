@@ -65,7 +65,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        {/* Copyright and Legal Links */}
+        {/* Copyright  */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 text-gray-200">
           <div className="text-sm font-medium">
             © {new Date().getFullYear()} {(import.meta.env.VITE_SCHOOL_NAME || 'Our Primary School')}. All Rights Reserved.
@@ -81,13 +81,13 @@ const Footer = () => {
             <a 
               href="#" 
               className="hover:text-white transition-colors duration-200 font-medium"
-              aria-label="View store designs"
+              aria-label="View stotes designs"
             >
-              Store Designs
+              Stotes Designs
             </a>
           </div>
         </div>
-
+   
         {/* Back to top button */}
         <button 
           onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}

@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useCallback } from 'react';
 
 const Stats = () => {
   const [stats, setStats] = useState([
@@ -24,11 +24,11 @@ const Stats = () => {
         } else {
           clearInterval(interval);
         }
-      }, 80);
+      }, 30);
     });
   }, [stats]);
 
-  const handleScroll = React.useCallback(() => {
+  const handleScroll =useCallback(() => {
     const statsSection = document.getElementById('stats-section');
     if (!statsSection) return;
     const rect = statsSection.getBoundingClientRect();

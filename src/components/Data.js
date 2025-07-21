@@ -218,7 +218,8 @@ export const UpcomingEvents = [
     "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
     "title": "Annual Sports Day",
     "description": "Join us for a day of fun, competition, and sportsmanship.",
-    "date": " March 15, 2024"
+    "date": " March 15, 2025",
+    "category":"Sports"
 },
 
 
@@ -227,7 +228,8 @@ export const UpcomingEvents = [
     "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
     "title": "Science Fair",
     "description": "Explore innovative projects by our talented students.",
-    "date": " April 20, 2024"
+    "date": " April 20, 2025",
+    "category":"Exhibition"
 },
 
 {
@@ -235,7 +237,8 @@ export const UpcomingEvents = [
     "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
     "title": "Parent-Teacher Conference",
     "description": "Discuss your child's progress with our dedicated teachers.",
-    "date": " May 10, 2024"
+    "date": " May 10, 2025",
+    "category":"Meeting"
 },
 
 {
@@ -243,7 +246,8 @@ export const UpcomingEvents = [
     "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
     "title": "Art Exhibition",
     "description": "Showcasing the creative talents of our students.",
-    "date": " June 5, 2024"
+    "date": " June 5, 2025",
+    "category":"Exhibition"
 },
 
 {
@@ -251,7 +255,7 @@ export const UpcomingEvents = [
     "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
     "title": "Cultural Day",
     "description": "Celebrating diversity through performances and exhibitions.",
-    "date": " July 12, 2024"
+    "date": " July 12, 2025"
 },
 
 {
@@ -259,8 +263,63 @@ export const UpcomingEvents = [
     "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
     "title": "Graduation Ceremony",
     "description": "Honoring our graduating class and their achievements.",
-    "date": "  August 25, 2024"
+    "date": "  August 25, 2025"
 },
+
+
+
+]
+
+
+// digital tour data
+
+export const digitalTourData = [
+
+    {
+        "title": "Virtual Tour",
+        "description": "Explore our campus from the comfort of your home with our interactive virtual tour.",
+        "image": "https://via.placeholder.com/600x400",
+        "link": "/virtual-tour"
+    },
+
+    {
+        "title": "360° Tour",
+        "description": "Experience a 360° view of our facilities, classrooms, and playgrounds.",
+        "image": "https://via.placeholder.com/600x400",
+
+    },
+
+    {
+        "title": "Campus Highlights",
+        "description": "Discover the key features of our school, including our library, science labs, and sports facilities.",
+        "image": "https://via.placeholder.com/600x400",
+        "link": "/campus-highlights"
+    },
+
+    {
+        "title": "Meet Our Staff",
+        "description": "Get to know our dedicated teachers and staff through video introductions.",
+        "image": "https://via.placeholder.com/600x400",
+        "link": "/meet-our-staff"
+    },
+
+    {
+        "title": "Student Testimonials",
+        "description": "Hear from our students about their experiences and what they love about our school.",
+        "image": "https://via.placeholder.com/600x400",
+        "link": "/student-testimonials"
+    },
+
+    {
+        "title": "School Calendar",
+        "description": "Stay updated with our school calendar, including important dates and events.",
+        "image": "https://via.placeholder.com/600x400",
+        "link": "/school-calendar"
+    },
+
+    
+
+
 
 
 

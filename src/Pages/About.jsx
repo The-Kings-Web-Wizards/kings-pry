@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../components/Banner';
 import { FaGraduationCap, FaChild, FaChalkboardTeacher, FaAward } from 'react-icons/fa';
 import teamImage from '../assets/team.jpg';
-import schoolImage from '../assets/school-building.png';
+// import schoolImage from '../assets/school-building.png';
 
 function About() {
   return (
@@ -15,11 +15,11 @@ function About() {
         ctaPath="/enroll"
         className='w-full h-[80vh] banner text-white '
       >
-        <img 
+        {/* <img 
           src={schoolImage} 
           alt="Kings Pry School" 
           className="w-full h-full object-cover -z-20" 
-        />
+        /> */}
       </Banner>
 
       {/* Mission Section */}

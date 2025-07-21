@@ -2,14 +2,16 @@
 
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
-import Cards from '../components/Cards';
+import { digitalTourData } from '../components/Data';
 import  {programsData} from '../components/Data'
 import Stats from '../components/Stats';
 import MultipleItems from '../components/MultipleItems';
 import Modal from '../components/Modal';
 import { useState } from 'react';
 import ModalSlider from '../components/ModalSlider';
-import { image } from 'framer-motion/client';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -18,7 +20,32 @@ function Home() {
 
   const [open,setOpen] = useState(false)
 
-
+  const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3, 
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1
+      }
+    }
+  ]
+};
 
 
 return (
@@ -32,11 +59,11 @@ ctaLink="/enroll"
 className='w-[100%] h-[100vh]  banner  text-white font-light '
 />
 {/* Quick Links Bar */}
-<section className="bg-[#004D24] text-white py-3">
+<section className=" bg-amber-400 text-white font-bold py-3">
 <div className="container mx-auto flex flex-wrap justify-center gap-4
 
 md:gap-8">
-<Link to="/admissions" className="hover:underline">Admissions</
+<Link to="/enroll" className="hover:underline">Admissions</
 Link>
 <Link to="/curriculum" className="hover:underline">Curriculum</Link>
 <Link to="/events" className="hover:underline">School Calendar</
@@ -74,7 +101,7 @@ rounded-lg hover:bg-[#00361a] transition">
 Learn More About Us
 </Link>
 <button  className="btn border-2 border-[#004d24] 
-text-[#004d24] py-3 px-6 rounded-lg hover:bg-gray-100 transition
+text-[#004d24] py-3 px-6 rounded-lg hover:bg-gray-100 transition cursor-pointer
 "
 onClick={()=>setOpen(true)}
 
@@ -82,16 +109,38 @@ onClick={()=>setOpen(true)}
 Take a Virtual Tour
 </button>
 
-<Modal open={open} onclose={()=>setOpen(false)} >
-  
- <ModalSlider >
-    <h2>Take a lovely tour of our school</h2>
-
+<Modal open={open} onClose={() => setOpen(false)} className='pt-20'>
+  {open && (
     <div>
-      <img src={image} />
+      <button
+        className="absolute top-4 right-4 z-50 bg-white rounded-full p-2 shadow hover:bg-gray-200 transition"
+        onClick={() => setOpen(false)}
+        aria-label="Close Modal"
+      >
+        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+          <line x1="6" y1="6" x2="18" y2="18" />
+          <line x1="6" y1="18" x2="18" y2="6" />
+        </svg>
+      </button>
+      <Slider {...settings}>
+        {digitalTourData.map((modalData) => (
+          <div key={modalData.id} className="px-auto w-[80%] h-[80%] ">
+            <div className="flex flex-col items-center bg-gray-100 h-[70%] p-4">
+              <img src={modalData.image} alt={modalData.title} className="w-full h-auto rounded-lg mb-4" />
+              <h3 className="text-xl font-semibold mb-2">{modalData.title}</h3>
+              <p className="text-gray-600 mb-4">{modalData.description}</p>
+              <Link
+                to={modalData.link}
+                className="btn bg-[#004d24] text-white py-2 px-4 rounded-lg hover:bg-[#00361a] transition"
+              >
+                {modalData.btnText}
+              </Link>
+            </div>
+          </div>
+        ))}
+      </Slider>
     </div>
- </ModalSlider>
-
+  )}
 </Modal>
 
 </div>
@@ -99,7 +148,7 @@ Take a Virtual Tour
 </div>
 </div>
 </section>
-{/* Stats Section */}
+
 
 
 
@@ -159,7 +208,8 @@ Take a Virtual Tour
             className="relative group overflow-hidden rounded-2xl bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
           >
             <div className="p-6 flex flex-col h-full">
-             
+
+              
               <h3 className="text-xl font-bold text-gray-900 mb-3">{program.title}</h3>
               <p className="text-gray-600 mb-6 flex-grow">{program.description}</p>
               <button className="self-start px-6 py-2 bg-[#004d24] text-white rounded-lg font-medium hover:bg-[#003a1a] transition-colors duration-300 flex items-center">
@@ -197,10 +247,10 @@ Discover how Kings Primary can help your child reach their full
 potential.
 </p>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<Link to='/admissions' className="btn bg-[#004d24] text-white py-3
+<a href='http/www.facebook.com' className="btn bg-[#004d24] text-white py-3
 px-8 rounded-lg font-semibold hover:bg-white hover:text-[#004d24] border-2 border-[#004d24] transition">
 Apply Now
-</Link>
+</a>
 <Link to='/contact' className="btn border-2 border-white 
 py-3 px-8 rounded-lg font-semibold hover:bg-[#00361a]  hover:text-white transition">
 Contact Us

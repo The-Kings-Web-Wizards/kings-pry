@@ -10,7 +10,7 @@ function Banner({ className, children, title, subtitle, ctaText, ctaPath }) {
   const remainingWords = titleParts.slice(1).join(' ');
 
   return (
-    <section className={`banner relative overflow-hidden ${className} isolate`}>
+    <section className={`banner relative overflow-hidden ${className} isolate bg-[#004d24]`}>
      
       {children}
       
@@ -55,21 +55,14 @@ function Banner({ className, children, title, subtitle, ctaText, ctaPath }) {
         >
           <Link 
             to={ctaPath} 
-            className="relative px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 text-black font-bold  rounded-xl text-lg md:text-xl transition-all duration-300 group overflow-hidden "
+            className=" px-8  py-4 bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 text-black font-bold  rounded-xl text-lg md:text-xl transition-all duration-300 group overflow-hidden "
           >
-            <span className="relative z-10 flex items-center">
-              {ctaText}
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" 
-                viewBox="0 0 20 20" 
-                fill="currentColor"
-              >
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </span>
             
-            <span className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-amber-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></span>
+              {ctaText}
+             
+            
+            
+           
           </Link>
         </motion.div>
       </div>
@@ -77,7 +70,7 @@ function Banner({ className, children, title, subtitle, ctaText, ctaPath }) {
       {/*  floating elements */}
       <div className="absolute top-1/4 right-1/4 w-10 h-4 rounded-full bg-amber-400/80 blur-[1px] animate-float1"></div>
       <div className="absolute top-1/3 left-1/4 w-10 h-4 rounded-full bg-white/60 blur-[1px] animate-float2"></div>
-      <div className="absolute bottom-1/4 right-1/3 w-10 h-4 rounded-full bg-[#004d24] blur-[1px] animate-float3"></div>
+      <div className="absolute bottom-1/4 right-1/3 w-10 h-4 rounded-full bg-white/60 blur-[1px] animate-float3"></div>
     </section>
   );
 }

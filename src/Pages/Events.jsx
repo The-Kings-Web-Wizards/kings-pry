@@ -1,9 +1,11 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import schoolImage from '../assets/school-building.png';
+// import schoolImage from '../assets/school-building.png';
 import { FaCalendarAlt, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { UpcomingEvents } from '../components/Data'
-import { motion } from 'framer-motion';
+import { motion} from 'framer-motion';
+
+
 
 // Animation variants
 const containerVariants = {
@@ -28,9 +30,15 @@ const itemVariants = {
 }
 
 function Events() {
+
+
+    
+
+
+
   return (
     <main className="bg-gray-50">
-      {/* Futuristic Banner Section */}
+      {/*  Banner Section */}
       <Banner
         title="Upcoming Events at Kings Pry"
         subtitle="Where Learning Meets Innovation"
@@ -38,16 +46,16 @@ function Events() {
         ctaPath="/calendar"
         className='w-full h-[90vh] banner text-white relative overflow-hidden'
       >
-        <img 
+        {/* <img 
           src={schoolImage} 
           alt="Kings Pry School" 
-          className="w-full h-full object-cover absolute top-0 left-0 -z-20" 
-        />
+          className="w-[400px] h-full object-cover absolute top-[20vh] rounded-3xl right-20 -z-20" 
+        /> */}
         <div className="absolute inset-0 bg-gradient-t from-[#004d24] to-transparent -z-10"></div>
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-50 to-transparent -z-10"></div>
+        <div className="absolute bottom-0 left-0 w-full h-32 -z-10"></div>
       </Banner>
 
-      {/* Events Section with Glassmorphism Effect */}
+      {/* Events Section with   */}
       <section className="py-20 px-4 md:px-10 lg:px-24 bg-gray-50 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -86,7 +94,7 @@ function Events() {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
-                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-blue-500 text-white">
+                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-amber-400 text-white">
                       {event.category || 'School Event'}
                     </span>
                   </div>
@@ -141,9 +149,20 @@ function Events() {
               <p className="text-gray-600 mb-4">Our innovative new curriculum integrates STEM with creative arts for a holistic learning experience.</p>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-gray-500">January 10, 2024</span>
-                <button className="text-amber-500 hover:text-blue-700 font-medium">Read More →</button>
+                <button className="text-amber-500 hover:text-blue-700 font-medium"
+                
+                
+                
+                
+                >Read More →</button>
               </div>
+              
+
             </motion.div>
+
+
+  
+
 
             <motion.div 
               whileHover={{ y: -10 }}
@@ -183,7 +202,7 @@ function Events() {
       </section>
 
       {/* Calendar Section */}
-      <section className='py-20 px-4 md:px-10 lg:px-24 bg-[#004d24] text-white'>
+      <section className='py-20 px-4 md:px-10 lg:px-24 bg-[#004d24] text-white' id='calendar'>
         <div className="max-w-7xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}

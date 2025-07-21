@@ -5,6 +5,7 @@ import  Enroll from './Pages/Enroll'
 import  Events from './Pages/Events'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'
+import Contact from './Pages/Contact';
 function App() {
   
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/enroll" element={<Enroll />} />
         <Route path="/events" element={<Events />} />
         <Route path="/about" element={<About />} />
+        <Route path='/contact' element={<Contact/>} />
      
        
       </Routes>
