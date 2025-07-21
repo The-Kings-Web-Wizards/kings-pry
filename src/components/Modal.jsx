@@ -8,7 +8,7 @@ function Modal({open,onclose,children}) {
     className={`
         
         fixed inset-0 flex justify-center items-center 
-        transition-colors z-40
+        transition-colors z-30
         ${open ? "visible bg-black" : "invisible"}
         
         `}
