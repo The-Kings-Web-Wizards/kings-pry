@@ -13,6 +13,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+// ..
+AOS.init();
+
 
 
 function Home() {
@@ -72,12 +77,14 @@ Link>
 <Link to="/contact" className="hover:underline">Contact Us</Link>
 </div>
 </section>
+
 {/* About Section */}
-<section className="about py-12 bg-gray-50">
+
+<section className="about py-12 bg-gray-50" data-aos="fade-up" data-aos-duration="5000" data-aos-delay="300" data-aos-easing="ease-in"   >
 <div className="container mx-auto px-4">
 <div className="flex flex-col md:flex-row-reverse items-center">
 <div className="img-container w-full md:w-1/2 mb-8 md:mb-0
-md:pl-8">
+md:pl-8" data-aos="fade-right" data-aos-duration="5000" data-aos-delay="500" data-aos-easing="ease-in-out">
 <img
 src="https://res.cloudinary.com/dxrv8lauy/image/upload/v1751275802
 /Rectangle_32_2_f7lvqe.png"
@@ -85,7 +92,7 @@ alt="Students learning in classroom"
 className="w-full h-auto rounded-lg shadow-md"
 />
 </div>
-<div className="about-text w-full md:w-1/2 text-center md:text-left">
+<div className="about-text w-full md:w-1/2 text-center md:text-left" data-aos="fade-down" data-aos-duration="5000" data-aos-delay="500" data-aos-easing="ease-in-out"  >
 <h2 className='font-bold text-3xl text-amber-400 mb-4'>Our
 Educational Philosophy</h2>
 <p className='text-lg mb-6'>
@@ -152,27 +159,46 @@ Take a Virtual Tour
 
 
 
-{/* stas secton */}
-
-<section  className='flex flex-col items-center justify-center space-x-7 py-[1.5em]'>
-
-  
-
-<Stats/>
-
-
+{/* Stats Section */}
+<section className="flex flex-col items-center justify-center py-[1.5em] bg-white">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-8" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500" data-aos-easing="ease-in-out">
+      <h2 className="text-3xl md:text-4xl font-bold text-amber-400 mb-2">Our Impact in Numbers</h2>
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        Kings Primary School is proud of our achievements and the vibrant community we’ve built. Here’s a snapshot of our journey so far:
+      </p>
+    </div>
+    <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+      <div className="flex-1 flex flex-col items-center bg-gray-50 rounded-xl shadow p-6 m-2" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100" data-aos-easing="ease-in" >
+        <span className="text-5xl font-extrabold text-amber-400 mb-2">500+</span>
+        <span className="text-lg font-medium text-gray-700">Happy Students</span>
+        <p className="text-gray-500 mt-2 text-center">Engaged in holistic learning and extracurricular activities.</p>
+      </div>
+      <div className="flex-1 flex flex-col items-center bg-gray-50 rounded-xl shadow p-6 m-2"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="200" data-aos-easing="ease-in">
+        <span className="text-5xl font-extrabold text-amber-400 mb-2">30+</span>
+        <span className="text-lg font-medium text-gray-700">Qualified Teachers</span>
+        <p className="text-gray-500 mt-2 text-center">Dedicated educators fostering growth and curiosity.</p>
+      </div>
+      <div className="flex-1 flex flex-col items-center bg-gray-50 rounded-xl shadow p-6 m-2"data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" data-aos-easing="ease-in-out">
+        <span className="text-5xl font-extrabold text-amber-400 mb-2">20</span>
+        <span className="text-lg font-medium text-gray-700">Years of Excellence</span>
+        <p className="text-gray-500 mt-2 text-center">A legacy of nurturing leaders and innovators.</p>
+      </div>
+      <div className="flex-1 flex flex-col items-center bg-gray-50 rounded-xl shadow p-6 m-2"data-aos="fade-down" data-aos-duration="2000" data-aos-delay="400" data-aos-easing="ease-in-out">
+        <span className="text-5xl font-extrabold text-amber-400 mb-2">15+</span>
+        <span className="text-lg font-medium text-gray-700">Clubs & Activities</span>
+        <p className="text-gray-500 mt-2 text-center">From sports to arts, every child finds their passion.</p>
+      </div>
+    </div>
+    
+  </div>
 </section>
 
-
-
-
-
-
-
 {/* Programs Section */}
-<section className="py-16  ">
+
+<section className="py-16  " data-aos="fade-up" data-aos-duration="5000" data-aos-delay="500" data-aos-easing="ease-in">
   <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
+    <div className="text-center mb-16"data-aos="fade-up" data-aos-duration="5000" data-aos-delay="500" data-aos-easing="ease-in">
       
       <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 relative">
         <span className="text-amber-400">
@@ -187,7 +213,7 @@ Take a Virtual Tour
 
     <div className="flex flex-col lg:flex-row gap-8 min-h-[500px]">
       {/* Image Card */}
-      <div className="lg:w-2/5 relative group rounded-3xl overflow-hidden shadow-2xl">
+      <div className="lg:w-2/5 relative group rounded-3xl overflow-hidden shadow-2xl" data-aos="flip-right" data-aos-duration="5000" data-aos-delay="500" data-aos-easing="ease-in">
         <img 
           src="https://res.cloudinary.com/dxrv8lauy/image/upload/v1751885574/ChatGPT_Image_Jul_7_2025_09_52_14_AM_eawm1x.png" 
           alt="Students learning" 
@@ -201,7 +227,7 @@ Take a Virtual Tour
       </div>
 
       {/* Programs Grid */}
-      <div className="lg:w-3/5 grid md:grid-cols-2 gap-6">
+      <div className="lg:w-3/5 grid md:grid-cols-2 gap-6"data-aos="fade-up" data-aos-duration="5000" data-aos-delay="500" data-aos-easing="ease-in">
         {programsData.map((program, id) => (
           <div 
             key={id}
