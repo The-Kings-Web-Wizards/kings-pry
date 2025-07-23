@@ -5,15 +5,30 @@ import { IoMdMail } from "react-icons/io";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaSkype } from "react-icons/fa6";
+import { useRef } from 'react';
 
 function Contact() {
 
+  const txtTitle = useRef();
+  const emailValue = useRef();
+
+  
+  
+  console.log(txtTitle)
+  console.log(emailValue)
 
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+   
+    e.preventDefault();
+    const title = txtTitle.current.value;
+    const mail = emailValue.current.value
+    alert(`Hi ${title} Thank you for contacting us we have sent a message to ${mail}  for further information`);
+    txtTitle.current.value = "";
+    emailValue.current.value = "";
     
-    window.alert("Your email has been received. Thank you for contacting us!");
-  }
+   
+  };
 
 
 
@@ -128,10 +143,12 @@ function Contact() {
 
                 <div className="form bg-white rounded-lg  p-8 max-w-full  flex-col items-start min-h-96 text-start ">
                   <h3 className="text-2xl font-bold text-gray-900">Contact Form</h3>
-                  <form className="w-full mt-4">
+                  <form className="w-full mt-4"onSubmit={handleSubmit} >
                     <div className="mb-4">
                       <label className="block text-gray-700 mb-2" htmlFor="name">Name</label>
                       <input
+
+                        ref={txtTitle}
                         type="text"
                         id="name"
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
@@ -141,6 +158,7 @@ function Contact() {
                     <div className="mb-4">
                       <label className="block text-gray-700 mb-2" htmlFor="email">Email</label>
                       <input
+                      ref={emailValue}
                         type="email"
                         id="email"
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
@@ -158,8 +176,8 @@ function Contact() {
                     </div>
                     <button
                       type="submit"
-                      onSubmit={handleSubmit}
-                      className=" w-full bg-[#004d24] text-white font-semibold rounded-lg hover:bg-[#006633] transition-colors duration-300"
+                     
+                      className=" py-2 px-5 w-full bg-[#004d24] text-white font-semibold rounded-lg hover:bg-[#006633] transition-colors duration-300 lg:w-50 "
                     >
                       Send Message
                     </button>

@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from '../components/Banner';
 import { FaGraduationCap, FaChild, FaChalkboardTeacher, FaAward } from 'react-icons/fa';
 import teamImage from '../assets/team.jpg';
+import { Link } from 'react-router-dom';
 // import schoolImage from '../assets/school-building.png';
 
 function About() {
@@ -33,25 +34,25 @@ function About() {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 ">
-            <div className="bg-amber-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
+            <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
               <FaGraduationCap className="text-amber-400 text-4xl mb-4" />
               <h3 className="text-xl font-bold mb-2">Academic Excellence</h3>
               <p className="text-gray-600">Rigorous curriculum designed to challenge and inspire</p>
             </div>
             
-            <div className="bg-amber-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
+            <div className="bg-gray-50 p-6 border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
               <FaChild className="text-amber-400 text-4xl mb-4" />
               <h3 className="text-xl font-bold mb-2">Character Development</h3>
               <p className="text-gray-600">Building integrity, respect, and responsibility</p>
             </div>
             
-            <div className="bg-amber-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
+            <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
               <FaChalkboardTeacher className="text-amber-400 text-4xl mb-4" />
               <h3 className="text-xl font-bold mb-2">Expert Faculty</h3>
               <p className="text-gray-600">Passionate educators dedicated to student success</p>
             </div>
             
-            <div className="bg-amber-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
+            <div className="bg-gray-50 border border-gray-200 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
               <FaAward className="text-amber-400 text-4xl mb-4" />
               <h3 className="text-xl font-bold mb-2">Proven Results</h3>
               <p className="text-gray-600">Consistent track record of outstanding achievements</p>
@@ -129,7 +130,7 @@ function About() {
               Book a Tour
             </button>
             <button className="px-8 py-3 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-amber-400 transition-all cursor-pointer">
-              Contact Us
+           <Link to="/contact" >Contact Us</Link>
             </button>
           </div>
         </div>

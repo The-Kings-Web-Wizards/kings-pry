@@ -184,7 +184,7 @@ function Navbar() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search..."
-                className="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                className="flex-1 px-4 py-2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-amber-400 text-[#004d24]"
               />
               <button 
                 type="submit"
@@ -215,7 +215,7 @@ function Navbar() {
                 </li>
               ))}
               
-              {/* Additional Mobile-only Links */}
+              {/* Additional Mobile Links */}
               <li className="w-full px-4 mt-4">
                 <Link
                   to="/login"

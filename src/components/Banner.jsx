@@ -23,13 +23,13 @@ function Banner({ className, children, title, subtitle, ctaText, ctaPath }) {
       <div className="absolute -top-20 -right-20 w-64 h-64 bg-amber-500 rounded-full filter blur-[80px] opacity-20 z-0"></div>
       
       {/* Content container */}
-      <div className="relative px-6 md:px-12 lg:px-24 flex flex-col justify-center items-start space-y-4 md:space-y-6 h-full z-10">
+      <div className="relative px-6 md:px-12 lg:px-10 flex flex-col justify-center items-start space-y-4 md:space-y-6 h-full z-10">
        
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-2xl max-w-4xl leading-tight"
+          className="text-4xl md:text-2xl lg:text-4xl font-bold text-white drop-shadow-2xl max-w-2xl leading-tight"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-300">
             {firstWord}
@@ -42,7 +42,7 @@ function Banner({ className, children, title, subtitle, ctaText, ctaPath }) {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-white/80 text-lg md:text-2xl max-w-2xl leading-relaxed z-20"
+          className="text-white text-lg md:text-md max-w-lg  leading-relaxed z-20"
         >
           {subtitle}
         </motion.p>
@@ -53,9 +53,16 @@ function Banner({ className, children, title, subtitle, ctaText, ctaPath }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <Link 
+
+        <button 
+        
+        className=" px-8  py-4 bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 text-black font-bold  rounded-xl text-lg md:text-xl transition-all duration-300 group overflow-hidden "
+        
+        >
+
+            <Link 
             to={ctaPath} 
-            className=" px-8  py-4 bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-300 hover:to-yellow-200 text-black font-bold  rounded-xl text-lg md:text-xl transition-all duration-300 group overflow-hidden "
+            
           >
             
               {ctaText}
@@ -64,6 +71,8 @@ function Banner({ className, children, title, subtitle, ctaText, ctaPath }) {
             
            
           </Link>
+        </button>
+        
         </motion.div>
       </div>
 

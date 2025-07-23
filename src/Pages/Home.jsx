@@ -2,7 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
-import { digitalTourData } from '../components/Data';
+
 import  {programsData} from '../components/Data'
 import Stats from '../components/Stats';
 import MultipleItems from '../components/MultipleItems';
@@ -25,44 +25,46 @@ function Home() {
 
   const [open,setOpen] = useState(false)
 
-  const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3, 
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1
-      }
-    }
-  ]
-};
-
-
 return (
 <main className="font-sans">
 {/* Hero Banner */}
 <Banner
-title="Welcome to Kings Primary School"
-subtitle="Nurturing excellence and character helps individuals reach their potential with integrity, resilience, and compassion, fostering success rooted in strong ethics."
-ctaText="Enroll"
-ctaLink="/enroll"
-className='w-[100%] h-[100vh]  banner  text-white font-light '
-/>
+  title="Welcome to Kings Primary School"
+  subtitle="Nurturing excellence and character helps individuals reach their potential with integrity, resilience, and compassion, fostering success rooted in strong ethics."
+  ctaText="Enroll Now"
+  ctaPath="/enroll"
+  className='w-full h-screen banner text-white font-light relative overflow-hidden'
+>
+
+  <div className="absolute inset-0 bg-[#004d24] z-0"></div>
+  
+  <div className="img-holder w-full max-w-xl h-[60vh] absolute right-10 top-85 -translate-y-1/2 hidden md:block">
+    <div className="relative w-full h-full group">
+      
+      <img 
+        src='/public/img1.png' 
+        alt="Students learning" 
+        className='w-full h-full object-cover rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-all duration-500' 
+      />
+      
+
+      {/* Decor elements */}
+
+      <div className="absolute -inset-4 border-2 border-white/30 rounded-3xl pointer-events-none"></div>
+      <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-amber-500 rounded-2xl opacity-20 blur-xl"></div>
+      <div className="absolute -top-6 -right-6 w-40 h-40 bg-blue-500 rounded-full opacity-20 blur-xl"></div>
+    </div>
+    
+    {/* Floating badge */}
+    <div className="absolute -left-10 top-3/4 bg-white text-amber-400 px-6 py-3 rounded-full shadow-lg font-medium text-sm rotate-[-5deg]">
+      🏆 #1 in Academic Excellence
+    </div>
+  </div>
+
+ 
+ 
+
+</Banner>
 {/* Quick Links Bar */}
 <section className=" bg-amber-400 text-white font-bold py-3">
 <div className="container mx-auto flex flex-wrap justify-center gap-4
@@ -117,37 +119,11 @@ Take a Virtual Tour
 </button>
 
 <Modal open={open} onClose={() => setOpen(false)} className='pt-20'>
-  {open && (
-    <div>
-      <button
-        className="absolute top-4 right-4 z-50 bg-white rounded-full p-2 shadow hover:bg-gray-200 transition"
-        onClick={() => setOpen(false)}
-        aria-label="Close Modal"
-      >
-        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
-          <line x1="6" y1="6" x2="18" y2="18" />
-          <line x1="6" y1="18" x2="18" y2="6" />
-        </svg>
-      </button>
-      <Slider {...settings}>
-        {digitalTourData.map((modalData) => (
-          <div key={modalData.id} className="px-auto w-[80%] h-[80%] ">
-            <div className="flex flex-col items-center bg-gray-100 h-[70%] p-4">
-              <img src={modalData.image} alt={modalData.title} className="w-full h-auto rounded-lg mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{modalData.title}</h3>
-              <p className="text-gray-600 mb-4">{modalData.description}</p>
-              <Link
-                to={modalData.link}
-                className="btn bg-[#004d24] text-white py-2 px-4 rounded-lg hover:bg-[#00361a] transition"
-              >
-                {modalData.btnText}
-              </Link>
-            </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
-  )}
+  
+    
+   <MultipleItems/>
+      
+     
 </Modal>
 
 </div>
@@ -264,10 +240,16 @@ Take a Virtual Tour
 </section>
 
 
-<section className="py-16 bg-amber-400 mb-5 text-white border-2 ">
+<section className="py-16 bg-amber-400 mb-5 text-white border-2 " 
+
+data-aos="fade-up" data-aos-duration="5000" data-aos-delay="500" data-aos-easing="ease-in">
+
+
 <div className="container mx-auto px-4 text-center">
-<h2 className="text-3xl font-bold mb-4">Ready to Join Our
-Community?</h2>
+<h2 className="text-3xl font-bold mb-4"
+
+data-aos="fade-up" data-aos-duration="5000" data-aos-delay="500" data-aos-easing="ease-in">
+Ready to Join Our Community?</h2>
 <p className="text-xl mb-8 max-w-2xl mx-auto">
 Discover how Kings Primary can help your child reach their full
 potential.

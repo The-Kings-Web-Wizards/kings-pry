@@ -8,17 +8,19 @@ function Modal({open,onclose,children}) {
     className={`
         
         fixed inset-0 flex justify-center items-center 
-        transition-colors z-40
+        transition-colors z-30
         ${open ? "visible bg-black" : "invisible"}
         
         `}
     
     >
-
-        <IoClose className='mx-auto text-3xl font-extrabold text-red-700 cursor-pointer absolute right-20 top-20 hover:text-red-500 transition-colors duration-300'
+        <button className='mx-auto text-3xl font-extrabold text-red-700 cursor-pointer absolute right-20 top-20 hover:text-red-500 transition-colors duration-300'
         
-        onClick={onclose}
+        onClick={onclose}>
+          
+        <IoClose 
        />
+        </button>
 
         {children}
 
