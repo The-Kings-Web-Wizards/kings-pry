@@ -29,7 +29,7 @@ function Navbar() {
     {
       id: 3,
       name: "Gallery",
-      path: "/gallery",
+      path: "/coming-soon",
       icon: <FiImage className="mr-2" />
     },
     {

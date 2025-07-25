@@ -2,6 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
+import Button from '../components/Button';
 
 import  {programsData} from '../components/Data'
 import Stats from '../components/Stats';
@@ -38,14 +39,14 @@ return (
 
   <div className="absolute inset-0 bg-[#004d24] z-0"></div>
   
-  <div className="img-holder w-full max-w-xl h-[60vh] absolute right-10 top-85 -translate-y-1/2 hidden md:block">
+  <div className="img-holder w-full max-w-xl h-[60vh] absolute right-23 top-85 -translate-y-1/2 hidden md:block">
     <div className="relative w-full h-full group">
       
-      <img 
+      {/* <img 
         src='/public/img1.png' 
         alt="Students learning" 
         className='w-full h-full object-cover rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-all duration-500' 
-      />
+      /> */}
       
 
       {/* Decor elements */}
@@ -65,6 +66,8 @@ return (
  
 
 </Banner>
+
+
 {/* Quick Links Bar */}
 <section className=" bg-amber-400 text-white font-bold py-3">
 <div className="container mx-auto flex flex-wrap justify-center gap-4
@@ -75,7 +78,7 @@ Link>
 <Link to="/curriculum" className="hover:underline">Curriculum</Link>
 <Link to="/events" className="hover:underline">School Calendar</
 Link>
-<Link to="/parents" className="hover:underline">Parent Portal</Link>
+<Link to="/coming-soon" className="hover:underline">Parent Portal</Link>
 <Link to="/contact" className="hover:underline">Contact Us</Link>
 </div>
 </section>
@@ -103,28 +106,49 @@ innovative teaching methods,
 personalized attention, and a curriculum that balances academic
 excellence with character development.
 </p>
+
+
+
 <div className="flex flex-col sm:flex-row gap-4 justify-center
 md:justify-start">
-<Link to='/about' className="btn bg-[#004d24] text-white py-3 px-6
-rounded-lg hover:bg-[#00361a] transition">
-Learn More About Us
-</Link>
-<button  className="btn border-2 border-[#004d24] 
-text-[#004d24] py-3 px-6 rounded-lg hover:bg-gray-100 transition cursor-pointer
-"
-onClick={()=>setOpen(true)}
 
->
-Take a Virtual Tour
-</button>
 
-<Modal open={open} onClose={() => setOpen(false)} className='pt-20'>
+ <Button 
+  path="/about" 
+  name="Learn More About Us" 
+  variant="ghost" 
+  size="large"
+  className="bg-[#004d24] text-white border-2 border-[#004d24] hover:bg-amber-400 transition-colors duration-300"
+/>
+
+<Button 
   
+  name="Take a Digital Tour" 
+  variant="ghost" 
+  size="large"  
+  className="bg-white text-[#004d24] border-2 border-[#004d24]"
+
+  onClick={()=>setOpen(true)}
+  
+/>
+
+<Modal open={open} onclose={()=>setOpen(false)}>
+
+    <video 
     
-   <MultipleItems/>
-      
-     
-</Modal>
+    className="w-150 h-80 rounded-lg shadow-lg"
+    controls ="true"
+    autoPlay muted loop
+  
+
+    
+    >
+
+< source src="https://res.cloudinary.com/dxrv8lauy/image/upload/v175 1275802/Rectangle_32_2_f7lvqe.mp4 " type="video/mp4" />
+
+    </video>
+
+  </Modal>
 
 </div>
 </div>
@@ -229,12 +253,15 @@ Take a Virtual Tour
 
     {/* CTA at bottom */}
     <div className="mt-16 text-center">
-      <button className="px-8 py-4 bg-gradient-to-r from-amber-400 to-amber-500 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-        <Link to ='/events'>
-        Explore All Programs
-        </Link>
+    <Button 
+  path="/events" 
+  name="Explore More Programs" 
+  variant="ghost" 
+  size='large'
 
-      </button>
+  className='px-8 py-3 bg-amber-400  rounded-lg text-white font-medium hover:shadow-lg transition-all duration-300 hover:scale-105'
+ 
+/>
     </div>
   </div>
 </section>

@@ -2,6 +2,8 @@ import React from 'react'
 import { IoClose } from "react-icons/io5";
 
 function Modal({open,onclose,children}) {
+  
+
   return (
     <div 
     
@@ -14,7 +16,7 @@ function Modal({open,onclose,children}) {
         `}
     
     >
-        <button className='mx-auto text-3xl font-extrabold text-red-700 cursor-pointer absolute right-20 top-20 hover:text-red-500 transition-colors duration-300'
+        <button className='mx-auto text-3xl font-extrabold text-red-700 cursor-pointer absolute right-20 top-20 hover:text-red-500 transition-colors duration-300 -z-40'
         
         onClick={onclose}>
           

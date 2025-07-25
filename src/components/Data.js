@@ -215,7 +215,7 @@ export const UpcomingEvents = [
 
 {
 
-    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "imgURL" : "https://res.cloudinary.com/dxrv8lauy/image/upload/v1753276290/22a9904ef857d35ae6890c29afa5bcfa_tv6paf.jpg",
     "title": "Annual Sports Day",
     "description": "Join us for a day of fun, competition, and sportsmanship.",
     "date": " March 15, 2025",
@@ -225,7 +225,7 @@ export const UpcomingEvents = [
 
 {
 
-    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "imgURL" : "https://res.cloudinary.com/dxrv8lauy/image/upload/v1751033302/ChatGPT_Image_Jun_25_2025_12_56_31_PM_nx5w0r.png",
     "title": "Science Fair",
     "description": "Explore innovative projects by our talented students.",
     "date": " April 20, 2025",
@@ -234,7 +234,7 @@ export const UpcomingEvents = [
 
 {
 
-    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "imgURL" : "https://res.cloudinary.com/dxrv8lauy/image/upload/v1753276291/f6bc460a3a54a70ac621ee9338d9ab8c_g9eugu.jpg",
     "title": "Parent-Teacher Conference",
     "description": "Discuss your child's progress with our dedicated teachers.",
     "date": " May 10, 2025",
@@ -252,7 +252,7 @@ export const UpcomingEvents = [
 
 {
 
-    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "imgURL" : "https://res.cloudinary.com/dxrv8lauy/image/upload/v1753276291/dde05903658cda88a698f94fdcc3802e_jli30m.jpg",
     "title": "Cultural Day",
     "description": "Celebrating diversity through performances and exhibitions.",
     "date": " July 12, 2025"
@@ -260,7 +260,7 @@ export const UpcomingEvents = [
 
 {
 
-    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "imgURL" : "https://res.cloudinary.com/dxrv8lauy/image/upload/v1753276290/277f83d6ed77da6040e4eb837bcd22bb_irifql.jpg",
     "title": "Graduation Ceremony",
     "description": "Honoring our graduating class and their achievements.",
     "date": "  August 25, 2025"

@@ -293,7 +293,7 @@ function Events() {
 
           <div className="text-center mt-12">
             <button className="px-8 py-3 bg-amber-400  rounded-lg text-white font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
-              Download Full Calendar
+             <a href="React-icons.pdf" download='School calander.pdf'> Download Full Calendar</a>
             </button>
           </div>
         </div>
@@ -312,7 +312,7 @@ function Events() {
               placeholder="Your email address" 
               className="flex-grow px-4 py-3 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
             />
-            <button className="px-6 py-3 cursor-pointer bg-[#004d24] text-white font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300">
+            <button className="px-6 py-3 cursor-pointer bg-[#004d24] text-white font-semibold rounded-lg hover:bg-amber-400 hover:border-2 hover:border-white transition-colors duration-300">
               Subscribe
             </button>
           </div>

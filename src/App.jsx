@@ -6,6 +6,9 @@ import  Events from './Pages/Events'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'
 import Contact from './Pages/Contact';
+import ComingSoon from './Pages/ComingSoon';
+import AiAssitant from './components/AiAssitant';
+
 function App() {
   
 
@@ -21,9 +24,12 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/about" element={<About />} />
         <Route path='/contact' element={<Contact/>} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
      
        
       </Routes>
+      <AiAssitant/>
     <Footer/>
       
     </>
