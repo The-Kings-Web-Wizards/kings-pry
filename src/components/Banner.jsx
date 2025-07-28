@@ -30,7 +30,7 @@ function Banner({ className, children, title, subtitle, ctaText, ctaPath }) {
           transition={{ duration: 0.8 }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg max-w-2xl leading-tight"
         >
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-green-200">
+          <span className="text-transparent bg-clip-text bg-amber-400">
             {firstWord}
           </span>{' '}
           <span className="text-white/90">{remainingWords}</span>
@@ -41,7 +41,7 @@ function Banner({ className, children, title, subtitle, ctaText, ctaPath }) {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-white/90 text-lg md:text-xl max-w-2xl leading-relaxed z-20 font-medium"
+          className="text-white/90 text-md  md:text-xl max-w-2xl leading-relaxed z-20 font-light"
         >
           {subtitle}
         </motion.p>
@@ -56,7 +56,7 @@ function Banner({ className, children, title, subtitle, ctaText, ctaPath }) {
   path={ctaPath}
   name={ctaText}
   variant="ghost" 
- className="px-8 py-3 bg-amber-400  rounded-lg text-white font-bold hover:shadow-lg transition-all duration-300 hover:scale-105"
+ className="px-8 py-3  bg-amber-400  rounded-lg text-white font-bold hover:shadow-lg transition-all duration-300 hover:scale-105"
 />
         </motion.div>
       </div>

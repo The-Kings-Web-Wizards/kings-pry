@@ -30,7 +30,7 @@ function ComingSoon() {
             Stay tuned for updates!
           </p>
         </div>
-        <div className="absolute bottom-4 right-4 animate-bounce">
+        <div className="absolute bottom-6 left-4 animate-bounce">
           <Link 
             to="/" 
             className="px-4 py-2 bg-amber-400 text-white rounded hover:bg-blue-600 transition-colors duration-300 shadow-md hover:shadow-lg"
@@ -86,7 +86,7 @@ function ComingSoon() {
             transform: translateY(0);
           }
           30% {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
           }
         }
         @keyframes bounce {

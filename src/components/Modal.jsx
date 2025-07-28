@@ -16,7 +16,7 @@ function Modal({open,onclose,children}) {
         `}
     
     >
-        <button className='mx-auto text-3xl font-extrabold text-red-700 cursor-pointer absolute right-20 top-20 hover:text-red-500 transition-colors duration-300 -z-40'
+        <button className='mx-auto text-3xl font-extrabold text-red-700 cursor-pointer absolute right-8 md:right-20 top-20 hover:text-red-500 transition-colors duration-300 -z-40'
         
         onClick={onclose}>
           

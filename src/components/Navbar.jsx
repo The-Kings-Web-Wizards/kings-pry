@@ -149,12 +149,12 @@ function Navbar() {
             
             {/* Search Button */}
             <li>
-              <button 
+              {/* <button 
                 onClick={toggleSearch}
                 className="p-1 hover:text-amber-500 transition-colors duration-200 cursor-pointer"
               >
                 <BiSearch className="text-xl" />
-              </button>
+              </button> */}
             </li>
           </ul>
         </div>

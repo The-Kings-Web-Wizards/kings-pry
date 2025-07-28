@@ -41,7 +41,7 @@ function Button({
   return (
     <Link
       to={path}
-      className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses}`}
+      className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${disabledClasses} w-full`}
       aria-disabled={disabled || loading}
       {...props}
     >

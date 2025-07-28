@@ -42,13 +42,13 @@ return (
   <div className="img-holder w-full max-w-xl h-[60vh] absolute right-23 top-85 -translate-y-1/2 hidden md:block">
     <div className="relative w-full h-full group">
       
-      {/* <img 
-        src='/public/img1.png' 
+      <img 
+        src='https://res.cloudinary.com/dxrv8lauy/image/upload/v1753446396/ChatGPT_Image_Jul_25__2025__12_14_54_PM-removebg-preview_fw35pl.png' 
         alt="Students learning" 
         className='w-full h-full object-cover rounded-2xl shadow-2xl transform group-hover:scale-[1.02] transition-all duration-500' 
-      /> */}
-      
-
+      />
+{/*       
+    
       {/* Decor elements */}
 
       <div className="absolute -inset-4 border-2 border-white/30 rounded-3xl pointer-events-none"></div>
@@ -233,17 +233,25 @@ md:justify-start">
             key={id}
             className="relative group overflow-hidden rounded-2xl bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
           >
-            <div className="p-6 flex flex-col h-full">
+            <div className="p-6 flex flex-col ">
+
+
+              <div className="img-holder w-full h-[250px]">
+                <img src={program.url} alt={program.title} className='w-full h-full object-cover object-top ' />
+              </div>
 
               
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{program.title}</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3 mt-3.5">{program.title}</h3>
               <p className="text-gray-600 mb-6 flex-grow">{program.description}</p>
-              <button className="self-start px-6 py-2 bg-[#004d24] text-white rounded-lg font-medium hover:bg-[#003a1a] transition-colors duration-300 flex items-center">
+
+              <button className="self-start cursor-pointer w-full  px-6 py-2 bg-[#004d24] text-white rounded-lg font-medium hover:bg-[#003a1a] transition-colors duration-300 flex items-center justify-center ">
                 {program.btnText}
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                 </svg>
               </button>
+
+
             </div>
             <div className="absolute top-0 left-0 w-1 h-full bg-amber-400"></div>
           </div>
@@ -259,8 +267,8 @@ md:justify-start">
   variant="ghost" 
   size='large'
 
-  className='px-8 py-3 bg-amber-400  rounded-lg text-white font-medium hover:shadow-lg transition-all duration-300 hover:scale-105'
- 
+  className='px-8 py-3 bg-amber-400 md:px-10 md:py-4 rounded-lg md:w-[280px] text-white font-medium hover:bg-[#003a1a] transition-all duration-300 '
+
 />
     </div>
   </div>

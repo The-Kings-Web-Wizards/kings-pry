@@ -179,26 +179,28 @@ excerpt: "State-of-the-art facility to enhance science and technologylearning."
 
 export const programsData = [
 {
-url: '/programs/early-years',
+
+    
+url: 'https://res.cloudinary.com/dxrv8lauy/image/upload/v1753276291/c74846fff69c319040843d9eb3055afa_tumkrl.jpg',
 title: 'Early Years Foundation',
 description: 'Nurturing environment for our youngest learners aged 3-5',
 btnText: 'Learn More'
 },
 {
-url: '/programs/primary',
+url: 'https://res.cloudinary.com/dxrv8lauy/image/upload/v1753688261/ChatGPT_Image_Jul_28_2025_09_36_53_AM_nnke43.png',
 title: 'Primary Education',
 description: 'Comprehensive curriculum for children aged 6-11',
 btnText: 'View Curriculum'
 },
 {
-url: '/programs/extracurricular',
+url: 'https://res.cloudinary.com/dxrv8lauy/image/upload/v1751885611/ChatGPT_Image_Jul_7_2025_10_02_20_AM_bprj23.png',
 title: 'Extracurricular',
 description: 'Sports, arts, and clubs to develop well-rounded individuals',
 btnText: 'Explore Activities'
 
 },
 {
-url: '/admissions',
+url: 'https://res.cloudinary.com/dxrv8lauy/image/upload/v1753689827/ChatGPT_Image_Jul_28__2025__10_00_46_AM-removebg-preview_wjj0gx.png',
 title: 'Admissions',
 description: 'Start your child\'s educational journey with us today',
 btnText: 'Enroll Now'
@@ -225,7 +227,7 @@ export const UpcomingEvents = [
 
 {
 
-    "imgURL" : "https://res.cloudinary.com/dxrv8lauy/image/upload/v1751033302/ChatGPT_Image_Jun_25_2025_12_56_31_PM_nx5w0r.png",
+    "imgURL" : "https://res.cloudinary.com/dxrv8lauy/image/upload/v1753687076/ChatGPT_Image_Jul_25_2025_09_59_03_AM_lkrvaj.png",
     "title": "Science Fair",
     "description": "Explore innovative projects by our talented students.",
     "date": " April 20, 2025",
@@ -243,7 +245,7 @@ export const UpcomingEvents = [
 
 {
 
-    "imgURL" : "http/cnkdcsdubknczdmcjdbiuhlkmd.s//nvidsbug7ugsklds//",
+    "imgURL" : "https://res.cloudinary.com/dxrv8lauy/image/upload/v1753688061/ChatGPT_Image_Jul_28_2025_09_31_14_AM_bmtl9a.png",
     "title": "Art Exhibition",
     "description": "Showcasing the creative talents of our students.",
     "date": " June 5, 2025",

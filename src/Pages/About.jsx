@@ -5,6 +5,14 @@ import teamImage from '../assets/team.jpg';
 import { Link } from 'react-router-dom';
 // import schoolImage from '../assets/school-building.png';
 
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+// ..
+AOS.init();
+
+
+
 function About() {
   return (
     <div className="bg-gray-50">
@@ -15,12 +23,10 @@ function About() {
         ctaText="Learn More"
         ctaPath="/enroll"
         className='w-full h-[80vh] banner text-white '
+
+        
       >
-        {/* <img 
-          src={schoolImage} 
-          alt="Kings Pry School" 
-          className="w-full h-full object-cover -z-20" 
-        /> */}
+      
       </Banner>
 
       {/* Mission Section */}
@@ -82,7 +88,7 @@ function About() {
               Our alumni network spans the globe, with graduates excelling in diverse fields from medicine
               to the arts, all carrying forward the Kings Pry legacy of excellence.
             </p>
-            <button className="px-6 py-3 bg-amber-400 hover:bg-amber-700 text-white font-bold rounded-lg transition-all cursor-pointer">
+            <button className="px-6 py-3 w-full md:w-[200px] bg-amber-400 hover:bg-amber-700 text-white font-bold rounded-lg transition-all cursor-pointer">
               Meet Our Alumni
             </button>
           </div>

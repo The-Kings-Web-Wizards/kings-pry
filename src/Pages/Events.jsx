@@ -5,6 +5,11 @@ import { FaCalendarAlt, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { UpcomingEvents } from '../components/Data'
 import { motion} from 'framer-motion';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+// ..
+AOS.init();
+
 
 
 // Animation variants
@@ -46,18 +51,21 @@ function Events() {
         ctaPath="/calendar"
         className='w-full h-[90vh] banner text-white relative overflow-hidden'
       >
-        {/* <img 
-          src={schoolImage} 
-          alt="Kings Pry School" 
-          className="w-[400px] h-full object-cover absolute top-[20vh] rounded-3xl right-20 -z-20" 
-        /> */}
+       
         <div className="absolute inset-0 bg-gradient-t from-[#004d24] to-transparent -z-10"></div>
         <div className="absolute bottom-0 left-0 w-full h-32 -z-10"></div>
       </Banner>
 
       {/* Events Section with   */}
-      <section className="py-20 px-4 md:px-10 lg:px-24 bg-gray-50 relative">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 md:px-10 lg:px-24 bg-gray-50 relative"
+      
+      data-aos="fade-up" data-aos-duration="5000" data-aos-delay="500" data-aos-once="true" 
+      
+      >
+        <div className="max-w-7xl mx-auto" 
+        
+        data-aos="fade-up" data-aos-duration="5000" data-aos-delay="500"
+        >
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -292,7 +300,7 @@ function Events() {
           </div>
 
           <div className="text-center mt-12">
-            <button className="px-8 py-3 bg-amber-400  rounded-lg text-white font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
+            <button className="px-8 py-3 w-full md:w-[250px] bg-amber-400  rounded-lg text-white font-medium hover:shadow-lg transition-all duration-300 hover:scale-105">
              <a href="React-icons.pdf" download='School calander.pdf'> Download Full Calendar</a>
             </button>
           </div>
